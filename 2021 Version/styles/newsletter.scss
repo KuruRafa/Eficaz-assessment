@@ -1,0 +1,51 @@
+.newsletter {
+    .row {
+        background-color: #fff;
+        margin: 0;
+
+        span {
+            text-transform: uppercase;
+            display: block;
+
+            &.big {
+                font-size: 19px;
+                letter-spacing: -1px;
+                font-weight: 300;
+
+                strong {
+                    font-weight: 500;
+                }
+            }
+
+            &.small {
+                font-size: 11px;
+                font-weight: 500;
+            }
+        }
+
+        input,
+        button {
+            padding: 10px;
+            border-radius: 0;
+            width: 100%;
+        }
+
+        input {
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: $color2;
+            color: #fff;
+            border: 1px solid $color2;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+    }
+
+    @media (max-width: 767px) {
+        input {
+            margin: 10px 0;
+        }
+    }
+}

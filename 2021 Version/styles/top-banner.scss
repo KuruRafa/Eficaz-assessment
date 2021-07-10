@@ -1,0 +1,52 @@
+.top_banner {
+    display: grid;
+    grid-template-columns: auto auto 250px;
+    grid-template-rows: 220px 220px;
+    grid-gap: 20px;
+
+    .banner_item {
+        overflow: hidden;
+
+        &:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+            .banner_carousel {
+                height: 100%;
+
+                .slick-list,
+                .slick-track,
+                .slick-slide{
+                    height: 100%;
+                }
+
+                .slick-dots {
+                    li {
+                        &.slick-active {
+                            button {
+                                background-color: #fff;
+                            }
+                        }
+
+                        button {
+                            background-color: $color3;
+                        }
+                    }
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 991px) {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+}
